@@ -362,6 +362,8 @@
       text-align: center;
       line-height: 1.3;
       margin: auto;
+      transform-origin: 0% 100%;
+      animation-fill-mode: forwards;
 
       &:before {
         position: absolute;
@@ -409,6 +411,8 @@
         line-height: 1.4;
         font-weight: 600;
         padding: 50px 20px;
+        transform-origin: 0% 100%;
+        animation-fill-mode: forwards;
 
         @include max-responsive($sm) {
           width: 300px;

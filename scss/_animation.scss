@@ -234,6 +234,18 @@ body {
     -moz-animation: floatSlow 1.5s ease infinite alternate;
     animation: floatSlow 1.5s ease infinite alternate;
   }
+  &--scaleOut{
+    @include base_scale(0);
+    @include transition(1s);
+  }
+  &--scaleIn{
+    @include base_scale(1);
+    @include transition(1s);
+  }
+  &--scaleBig{
+    @include base_scale(2);
+    @include transition(1s);
+  }
 }
 
 // Floating Down

@@ -83,14 +83,17 @@ $(document).ready(function() {
         $(".page__static__rain").removeClass("hide");          
       }
       else if (index == 5 && direction == "down") {      
-        
+        $(".quotes__bubble").addClass("animate--scaleIn")
       } 
       else if (index == 6 && direction == "up") {
+        $(".quotes__bubble").removeClass("animate--scaleIn")
       }
       else if (index == 6 && direction == "down") {  
+        $(".quotes__bubble").removeClass("animate--scaleIn")
         $(".page__static__yuyun").removeClass("hide");     
       } 
       else if (index == 7 && direction == "up") {
+        $(".quotes__bubble").addClass("animate--scaleIn")
         $(".page__static__yuyun").addClass("hide");      
       }
       else if (index == 7 && direction == "down") {  
@@ -113,16 +116,20 @@ $(document).ready(function() {
         
       }
       else if (index == 10 && direction == "down") {
-        $(".social").fadeIn(300);             
+        $(".social").fadeIn(300);      
+        $(".quotes__bubble__2").addClass("animate--scaleIn")       
       }
       else if (index == 11 && direction == "up") {
         $(".social").fadeOut(300);
+        $(".quotes__bubble__2").removeClass("animate--scaleIn")       
         
       }
       else if (index == 11 && direction == "down") {
+        $(".quotes__bubble__2").removeClass("animate--scaleIn")       
         $(".page__static__nini").removeClass("hide");
       }
       else if (index == 12 && direction == "up") {
+        $(".quotes__bubble__2").addClass("animate--scaleIn")       
         $(".page__static__nini").addClass("hide");
       }
       else if (index == 12 && direction == "down") {
@@ -304,3 +311,10 @@ $(document).ready(function() {
   };
   makeItRain();
 });
+
+// Mobile Version
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  $(".cover__background").remove();
+} else {
+   
+}
